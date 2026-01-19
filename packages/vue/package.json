@@ -1,0 +1,64 @@
+{
+  "name": "@gomarky/picture-in-picture-window-vue",
+  "version": "0.1.0",
+  "description": "Vue 3 composable for Document Picture-in-Picture API",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "picture-in-picture",
+    "pip",
+    "document-picture-in-picture",
+    "vue",
+    "vue3",
+    "composable"
+  ],
+  "author": "gomarky",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gomarky/document-picture-in-picture.git",
+    "directory": "packages/vue"
+  },
+  "homepage": "https://github.com/gomarky/document-picture-in-picture#readme",
+  "bugs": {
+    "url": "https://github.com/gomarky/document-picture-in-picture/issues"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.0"
+  },
+  "dependencies": {
+    "@gomarky/picture-in-picture-window": "workspace:*"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vue": "^3.4.0"
+  }
+}

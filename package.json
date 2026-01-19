@@ -1,0 +1,42 @@
+{
+    "name": "@gomarky/picture-in-picture-window-monorepo",
+    "version": "0.0.0",
+    "private": true,
+    "description": "Monorepo for Picture-in-Picture Window libraries",
+    "type": "module",
+    "scripts": {
+        "build": "pnpm -r run build",
+        "dev:vanilla": "pnpm --filter @examples/vanilla dev",
+        "dev:vue": "pnpm --filter @examples/vue dev",
+        "dev:react": "pnpm --filter @examples/react dev",
+        "test": "vitest",
+        "test:run": "vitest run",
+        "test:coverage": "vitest run --coverage",
+        "lint": "eslint packages --ext .ts,.tsx,.vue",
+        "typecheck": "pnpm -r run typecheck",
+        "clean": "pnpm -r run clean && rm -rf node_modules",
+        "changeset": "changeset",
+        "version": "changeset version",
+        "release": "pnpm build && pnpm changeset publish"
+    },
+    "devDependencies": {
+        "@changesets/cli": "^2.27.1",
+        "@testing-library/react": "^14.1.2",
+        "@types/node": "^20.11.0",
+        "@vitest/coverage-v8": "^1.2.0",
+        "eslint": "^8.56.0",
+        "jsdom": "^24.0.0",
+        "tsup": "^8.0.1",
+        "typescript": "^5.3.3",
+        "vitest": "^1.2.0",
+        "vue": "^3.4.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "@types/react": "^18.2.48",
+        "@types/react-dom": "^18.2.18"
+    },
+    "packageManager": "pnpm@8.14.0",
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}
